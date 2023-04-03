@@ -3,7 +3,25 @@
 // dis1.push(5, 3);
 // console.log(dis1.join("-"));
 
-// (1) використовуючи цикл виведіть суму чисел між  А і В з умовоб що A<B    (((Не зрозумів умову)))
+// (1. The sum of consecutive numbers between the given numbers) використовуючи цикл виведіть суму чисел між  А і В з умовоб що A<B
+
+console.log("1) The sum of consecutive numbers between the given numbers")
+
+let A = Number(prompt("(1. The sum of consecutive numbers between the given numbers) Enter first number:"));
+let B = Number(prompt("(1. The sum of consecutive numbers between the given numbers) Enter second number (greater than first):"));
+let result = 0;
+let text = "";
+
+if(A < B){
+    for(let i = B-A+1; i > 0; i--){
+        text += i === 1 ? `${A}=` : `${A}+`;
+        result+=A++;
+    }
+    console.log(text+result);
+}
+else{
+    console.log("The entered information conflicts with the condition!!!");
+}
 
 // (2. Decline) зробити цикл який виводить дані навпаки від більшого до меншог. Наприклад від 10 до 0 (10, 9, 8, 7, 6 ...)
 
